@@ -12,21 +12,21 @@
     "README": "a7a9783d8dccf3616cc08a13d997962a",
     "README.md": "7ce42ea65fdc5dfcc62964ad43edd23b",
     "files\\server\\cgi.cfg": "8ed52f7ede3005629445e194de433644",
-    "files\\server\\nagios.cfg": "ea04c380f282b77cb57de119fd3f4f77",
+    "files\\server\\nagios.cfg": "9b7487faad2cc3efd738f7c92e13376d",
     "files\\server\\passwd": "cd9238f69aea1628afa431254a68b213",
     "manifests\\init.pp": "30f753e42741bc34c4ebb0aa1bf7ae17",
     "manifests\\server\\commands.pp": "94dc4930fc6a99fe25cb3fe0e435dca7",
     "manifests\\server\\contactgroups.pp": "f093d278e48337bfcb0c3973a4a10702",
     "manifests\\server\\contacts.pp": "16fc0050b2c17cb90667b35b0b5d92b6",
-    "manifests\\server\\core.pp": "6c9b0b3b74551642495c6b6008f498bd",
+    "manifests\\server\\core.pp": "3d8c31242f22bb2c7880a800708c3576",
     "manifests\\server\\hostdependencys.pp": "0013365a0d0deba915542d5926ddcd57",
-    "manifests\\server\\hostgroups.pp": "e9c78ca5efafa919d9ed0605b72608e8",
+    "manifests\\server\\hostgroups.pp": "f14ac5dae6af0a92cb75bd2fca895c72",
     "manifests\\server\\hosts.pp": "5892c509b9bc13b67b22979fd331331a",
-    "manifests\\server\\services.pp": "3ef8872aa48945ebefa37d705abb6547",
+    "manifests\\server\\services.pp": "9dfc937b9fb5b7118ec10324816306d7",
     "manifests\\server\\timeperiods.pp": "df6766f384f29323456390fd0fa6e26d",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
-    "tests\\init.pp": "7999a52fd59e88456b864f93fda1e081"
+    "tests\\init.pp": "11886b44dc26c9c346abd69b283c8023"
   },
   "dependencies": []
 }

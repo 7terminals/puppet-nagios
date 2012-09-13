@@ -15,6 +15,7 @@ class nagios::server::services {
 			notification_options => 'w,u,c,r',
 			notification_period => '24x7',
 			notifications_enabled => '1',
+			notification_interval => '120',
 			/* Active service checks should be parallelized (disabling this can lead to major performance problems) */
 			parallelize_check => '1',
 			passive_checks_enabled => '1',
@@ -25,5 +26,6 @@ class nagios::server::services {
 			retry_check_interval => '1',
 			/* DONT REGISTER THIS DEFINITION - ITS NOT A REAL SERVICE, JUST A TEMPLATE! */
 			register => '0',
+			
 	}
 }

@@ -41,7 +41,7 @@ class nagios::server::core {
 	file {
 		'/etc/nagios/passwd' :
 			ensure => present,
-			source => 'puppet:///modules/nagios/server/cgi.cfg',
+			source => 'puppet:///modules/nagios/server/passwd',
 			require => File['/etc/nagios/nagios.cfg'],
 	}
 	service {
