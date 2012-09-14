@@ -1,4 +1,9 @@
 class nagios::server::services {
+	resources {
+		'nagios_service' :
+			name => 'nagios_service',
+			purge => true,
+	}
 	nagios_service {
 		'service-template-generic-service' :
 			active_checks_enabled => '1',
@@ -26,6 +31,5 @@ class nagios::server::services {
 			retry_check_interval => '1',
 			/* DONT REGISTER THIS DEFINITION - ITS NOT A REAL SERVICE, JUST A TEMPLATE! */
 			register => '0',
-			
 	}
 }

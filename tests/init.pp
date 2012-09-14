@@ -11,10 +11,24 @@ nagios_host {
 		use => 'host-template-linux-server',
 }
 nagios_service {
-	'localhost-check_ping' :
+	"${fqdn}-ping" :
 		use => 'service-template-generic-service',
 		host_name => 'localhost',
-		service_description => 'PING',
-		check_command => 'check_ping!100.0,20%!500.0,60%'
+		service_description => 'ping',
+		check_command => 'check_ping!100,20%!500,60%',
+}
+nagios_service {
+	"${fqdn}-load" :
+		use => 'service-template-generic-service',
+		host_name => 'localhost',
+		service_description => 'load',
+		check_command => 'check_local_load!1!5',
+}
+nagios_service {
+	"${fqdn}-disk":
+		use => 'service-template-generic-service',
+		host_name => 'localhost',
+		service_description => 'disk',
+		check_command => 'check_local_disk!25%!20%!/!',
 }
 
