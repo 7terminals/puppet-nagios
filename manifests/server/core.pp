@@ -14,9 +14,14 @@
 class nagios::server::core {
   package { 'nagios': ensure => installed, }
 
+  package { 'nagios-plugins-all':
+    ensure  => installed,
+    require => Package['nagios'],
+  }
+
   file { '/etc/nagios/localhost.cfg':
     ensure  => absent,
-    require => Package['nagios'],
+    require => Package['nagios-plugins-all'],
   }
 
   file { '/etc/nagios/commands.cfg':
