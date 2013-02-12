@@ -5,8 +5,7 @@ class nagios::server::hostgroups {
   }
 
   nagios_hostgroup { 'hostgroup-generic-servers':
-    ensure  => present,
-    alias   => 'Generic hostgroup',
-    members => 'localhost',
+    ensure => present,
+    alias  => 'Generic hostgroup',
   }
 }
