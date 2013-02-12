@@ -115,12 +115,12 @@ class nagios::server::commands {
     command_line => '/usr/bin/printf "%b" "***** Nagios 2.12 *****\n\nNotification Type: $NOTIFICATIONTYPE$\n\nService: $SERVICEDESC$\nHost: $HOSTALIAS$\nAddress: $HOSTADDRESS$\nState: $SERVICESTATE$\n\nDate/Time: $LONGDATETIME$\n\nAdditional Info:\n\n$SERVICEOUTPUT$" | /bin/mail -s "** $NOTIFICATIONTYPE$ alert - $HOSTALIAS$/$SERVICEDESC$ is $SERVICESTATE$ **" $CONTACTEMAIL$',
   }
 
-  /* SAMPLE PERFORMANCE DATA COMMANDS
-   * These are sample performance data commands that can be used to send performance
-   * data output to two text files (one for hosts, another for services).  If you
-   * plan on simply writing performance data out to a file, consider using the
-   * host_perfdata_file and service_perfdata_file options in the main config file.
-   */
+  # SAMPLE PERFORMANCE DATA COMMANDS
+  # These are sample performance data commands that can be used to send performance
+  # data output to two text files (one for hosts, another for services).  If you
+  # plan on simply writing performance data out to a file, consider using the
+  # host_perfdata_file and service_perfdata_file options in the main config file.
+
   nagios_command { 'process-host-perfdata':
     ensure       => present,
     command_line => '/usr/bin/printf "%b" "$LASTHOSTCHECK$\t$HOSTNAME$\t$HOSTSTATE$\t$HOSTATTEMPT$\t$HOSTSTATETYPE$\t$HOSTEXECUTIONTIME$\t$HOSTOUTPUT$\t$HOSTPERFDATA$\n" >> /var/log/nagios/host-perfdata.out',
@@ -130,3 +130,5 @@ class nagios::server::commands {
     ensure       => present,
     command_line => '/usr/bin/printf "%b" "$LASTSERVICECHECK$\t$HOSTNAME$\t$SERVICEDESC$\t$SERVICESTATE$\t$SERVICEATTEMPT$\t$SERVICESTATETYPE$\t$SERVICEEXECUTIONTIME$\t$SERVICELATENCY$\t$SERVICEOUTPUT$\t$SERVICEPERFDATA$\n" >> /var/log/nagios/service-perfdata.out',
   }
+}
+
